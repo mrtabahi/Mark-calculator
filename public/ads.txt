@@ -1,2 +1,3 @@
 # Replace this placeholder with the exact line shown by Google AdSense.
 # Example: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-2757719583090087, DIRECT, f08c47fec0942fa0
