@@ -1,0 +1,4 @@
+VITE_SUPABASE_URL=https://fvkcrtwsmaiipohalnyo.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_publishable_9AvAWXljf6SAULQPBzdeSQ_aDttkvg9
+VITE_ADSENSE_CLIENT=ca-pub-2757719583090087
+VITE_SITE_URL=https://decode-marks.vercel.app/
