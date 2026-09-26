@@ -64,18 +64,23 @@ export const CONSTANTS = {
 };
 
 /**
- * Method 1
+ * METHOD 1
  *
  * Formula:
  *
- * A = [12.96 / |Tq - Sq|] × |B - Sq| + 76.54
+ * A = 12.96 × (B - Sq) / (Tq - Sq) + 76.54
  *
- * सभी differences को absolute रखा गया है,
- * इसलिए कोई negative difference नहीं आएगा.
+ * B  = Raw Marks
+ * Tq = Tq value of the shift
+ * Sq = Sq value of the shift
+ *
+ * IMPORTANT:
+ * Normal subtraction is used.
+ * Math.abs() is NOT used.
  */
 export function normalize(raw: number, shift: Shift): number {
-  // Tq और Sq का केवल difference
-  const denominator = Math.abs(shift.tq - shift.sq);
+  const denominator = shift.tq - shift.sq;
+  const numerator = raw - shift.sq;
 
   if (
     !Number.isFinite(raw) ||
@@ -86,43 +91,57 @@ export function normalize(raw: number, shift: Shift): number {
     return NaN;
   }
 
-  // Raw marks और Sq का केवल difference
-  const rawDifference = Math.abs(raw - shift.sq);
-
   return (
-    (CONSTANTS.multiplier / denominator) * rawDifference +
+    CONSTANTS.multiplier *
+      (numerator / denominator) +
     CONSTANTS.base
   );
 }
 
 /**
- * Method 2
+ * METHOD 2
  *
- * 1. पहले सभी shifts का Method 1 calculate होगा.
- * 2. Easy/Reference shift चुनी जाएगी.
- * 3. Raw और Easy Shift के Method 1 result का
- *    केवल absolute difference लिया जाएगा.
- * 4. वही positive correction सभी shifts में add होगा.
+ * Easy/Reference Shift:
+ * 2 Sep - 3rd Shift
  *
- * correction = |Raw - Easy Method 1|
+ * Step 1:
+ * Calculate Method 1 for every shift.
  *
- * Method 2 = Method 1 + correction
+ * Step 2:
+ * Calculate how many marks the Easy Shift
+ * falls short of the original Raw Marks.
+ *
+ * correction = Raw Marks - Easy Shift Method 1
+ *
+ * Step 3:
+ * Add this same correction to every
+ * Method 1 result.
  */
 export function calculate(
   raw: number,
   shifts = DEFAULT_SHIFTS
 ): Result[] {
-  const method1 = shifts.map((shift) => normalize(raw, shift));
-
-  const easyIndex = Math.max(
-    0,
-    shifts.findIndex((s) => s.easy)
+  const method1 = shifts.map((shift) =>
+    normalize(raw, shift)
   );
+
+  const easyIndex = shifts.findIndex(
+    (shift) => shift.easy === true
+  );
+
+  if (easyIndex === -1) {
+    return shifts.map((shift, index) => ({
+      ...shift,
+      method1: method1[index],
+      method2: method1[index]
+    }));
+  }
 
   const easyMethod1 = method1[easyIndex];
 
-  // केवल difference, negative value नहीं
-  const correction = Math.abs(raw - easyMethod1);
+  // Easy shift me raw score se jitna difference hai,
+  // wahi amount sabhi Method 1 results me add hoga.
+  const correction = raw - easyMethod1;
 
   return shifts.map((shift, index) => ({
     ...shift,
