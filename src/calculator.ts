@@ -15,10 +15,10 @@ export type Result = Shift & {
 export const DEFAULT_SHIFTS: Shift[] = [
   { id: '2026-09-02-1', dateLabel: '2 Sep', shiftLabel: '1st Shift', tq: 89.35, sq: 78.95 },
   { id: '2026-09-02-2', dateLabel: '2 Sep', shiftLabel: '2nd Shift', tq: 86, sq: 76.54 },
-  { id: '2026-09-02-3', dateLabel: '2 Sep', shiftLabel: '3rd Shift', tq: 91.6, sq: 86.87, easy: true },
+  { id: '2026-09-02-3', dateLabel: '2 Sep', shiftLabel: '3rd Shift', tq: 91.6, sq: 80.87, easy: true },
   { id: '2026-09-03-1', dateLabel: '3 Sep', shiftLabel: '1st Shift', tq: 89.4, sq: 78.85 },
-  { id: '2026-09-18-1', dateLabel: '18 Sep', shiftLabel: '1st Shift', tq: 89.6, sq: 77.55 },
-  { id: '2026-09-18-2', dateLabel: '18 Sep', shiftLabel: '2nd Shift', tq: 89, sq: 86.68 }
+  { id: '2026-09-18-1', dateLabel: '18 Sep', shiftLabel: '1st Shift', tq: 91.6, sq: 77.55 },
+  { id: '2026-09-18-2', dateLabel: '18 Sep', shiftLabel: '2nd Shift', tq: 89, sq: 80.68 }
 ];
 
 export const CONSTANTS = {
