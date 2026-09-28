@@ -24,7 +24,7 @@ function appTemplate() {
     />
           </div>
           <div>
-            <div class="brand-name">DECODING HCM</div>
+            <div class="brand-name">DECODING HCMmmmm</div>
             <div class="brand-sub">BSF HCM Normalization Calculator</div>
           </div>
         </div>
