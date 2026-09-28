@@ -79,7 +79,7 @@ function appTemplate() {
           </div>
           <div id="results-grid" class="results-grid"></div>
           <div class="compare-note">
-            <strong>Reference shift:</strong> 2 Sep · 3rd Shift is marked as the easy/reference shift for Method 2.
+            <strong>Reference shift:</strong> 18 Sep · 2nd Shift is marked as the easy/reference shift for Method 2.
           </div>
           <button id="copy-btn" class="secondary-btn">Copy Result Summary</button>
         </section>
@@ -101,9 +101,9 @@ function appTemplate() {
 
         <section class="card info-card">
           <h2>Formula</h2>
-          <div class="formula-large">A = [12.96 ÷ (Tq − Sq)] × (B − Sq) + 76.54</div>
+          <div class="formula-large">A = [28.53÷ (Tq − Sq)] × (B − Sq) + 68</div>
           <p><strong>B</strong> = आपका raw mark · <strong>Tq</strong> और <strong>Sq</strong> = selected shift के parameters.</p>
-          <p class="small-note">Method 2 की implementation: पहले Method 1 निकाला जाता है, फिर 2 Sep 3rd Shift के raw-vs-normalized difference को सभी shifts के Method 1 result में समान रूप से add किया जाता है। इससे reference shift का Method 2 result raw mark के बराबर हो जाता है.</p>
+          <p class="small-note">Method 2 की implementation: पहले Method 1 निकाला जाता है, फिर 18 Sep 2nd Shift के raw-vs-normalized difference को सभी shifts के Method 1 result में समान रूप से add किया जाता है। इससे reference shift का Method 2 result raw mark के बराबर हो जाता है.</p>
         </section>
 
         <section class="ad-slot" aria-label="Advertisement">
@@ -135,9 +135,9 @@ function appTemplate() {
 function renderFormulaExplanation() {
   const el = document.querySelector<HTMLDivElement>('#method-explanation')!;
   if (selectedMethod === 'method1') {
-    el.innerHTML = `<div class="formula-line">A = [12.96 ÷ (Tq − Sq)] × (B − Sq) + 76.54</div><div class="formula-sub">यह आपकी image में दिया गया primary formula है।</div>`;
+    el.innerHTML = `<div class="formula-line">A = [28.53 ÷ (Tq − Sq)] × (B − Sq) + 68</div><div class="formula-sub">यह आपकी image में दिया गया primary formula है।</div>`;
   } else {
-    el.innerHTML = `<div class="formula-line">M2ᵢ = M1ᵢ + (B − M1<sub>easy</sub>)</div><div class="formula-sub">Easy/reference = 2 Sep, 3rd Shift. इसका उद्देश्य उस reference shift को raw marks के बराबर align करना है।</div>`;
+    el.innerHTML = `<div class="formula-line">M2ᵢ = M1ᵢ + (B − M1<sub>easy</sub>)</div><div class="formula-sub">Easy/reference = 18 Sep, 2nd Shift. इसका उद्देश्य उस reference shift को raw marks के बराबर align करना है।</div>`;
   }
 }
 
@@ -186,7 +186,7 @@ function bindEvents() {
     const error = document.querySelector<HTMLDivElement>('#error')!;
     const raw = Number(input.value);
     if (!Number.isFinite(raw) || raw < 0 || raw > 200) {
-      error.textContent = 'कृपया 0 से 200 के बीच valid marks डालें।';
+      error.textContent = 'कृपया 0 से 100 के बीच valid marks डालें।';
       return;
     }
     error.textContent = '';
