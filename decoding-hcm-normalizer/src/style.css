@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
 
 :root{font-family:Inter,'Noto Sans Devanagari',system-ui,sans-serif;color:#111827;background:#f5f7fb;line-height:1.5;font-synthesis:none;text-rendering:optimizeLegibility}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,#e8eefc 0,#f5f7fb 32%,#f5f7fb 100%);min-height:100vh}button,input{font:inherit}button{cursor:pointer}.app-shell{min-height:100vh}.topbar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(10,18,32,.94);color:white;backdrop-filter:blur(12px);box-shadow:0 5px 24px rgba(15,23,42,.14)}.brand{display:flex;align-items:center;gap:11px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,#e8eefc 0,#f5f7fb 32%,#f5f7fb 100%);min-height:100vh}button,input{font:inherit}button{cursor:pointer}
+.app-shell{min-height:100vh}
+.topbar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(10,18,32,.94);color:white;backdrop-filter:blur(12px);box-shadow:0 5px 24px rgba(15,23,42,.14)}
+.brand{display:flex;align-items:center;gap:11px}
 .brand-mark {
   width: 44px;
   height: 44px;
@@ -11,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: red;
   border: 2px solid rgba(255, 255, 255, 0.85);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
 }
