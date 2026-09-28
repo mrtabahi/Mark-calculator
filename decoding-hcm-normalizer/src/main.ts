@@ -17,7 +17,7 @@ function appTemplate() {
       <header class="topbar">
         <div class="brand">
           <div class="brand-mark">
-          <div class="brand-mark">
+          
           img
       src="logo.png"
       alt="Decoding HCM Logo"
