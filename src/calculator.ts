@@ -17,50 +17,50 @@ export const DEFAULT_SHIFTS: Shift[] = [
     id: '2026-09-02-1',
     dateLabel: '2 Sep',
     shiftLabel: '1st Shift',
-    tq: 89.35,
-    sq: 78.95
+    tq: 94.33,
+    sq: 67.92
   },
   {
     id: '2026-09-02-2',
     dateLabel: '2 Sep',
     shiftLabel: '2nd Shift',
-    tq: 86,
-    sq: 76.54
+    tq: 92.6,
+    sq: 68.08
   },
   {
     id: '2026-09-02-3',
     dateLabel: '2 Sep',
     shiftLabel: '3rd Shift',
-    tq: 91.6,
-    sq: 80.87,
-    easy: true
+    tq: 96.4,
+    sq: 69.11
   },
   {
     id: '2026-09-03-1',
     dateLabel: '3 Sep',
     shiftLabel: '1st Shift',
-    tq: 89.4,
-    sq: 78.85
+    tq: 95.38,
+    sq: 66.42
   },
   {
     id: '2026-09-18-1',
     dateLabel: '18 Sep',
     shiftLabel: '1st Shift',
-    tq: 91.6,
-    sq: 77.55
+    tq: 96.5,
+    sq: 72.1,
+    easy: true
   },
   {
     id: '2026-09-18-2',
     dateLabel: '18 Sep',
     shiftLabel: '2nd Shift',
-    tq: 89,
-    sq: 80.68
+    tq: 94.5,
+    sq: 68.06
   }
 ];
 
 export const CONSTANTS = {
-  multiplier: 12.96,
-  base: 76.54
+  multiplier: 28.53,
+  base: 68
 };
 
 /**
