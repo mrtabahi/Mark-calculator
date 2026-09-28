@@ -18,7 +18,7 @@ function appTemplate() {
         <div class="brand">
           <div class="brand-mark">
           
-          img
+         < img
       src="logo.png"
       alt="Decoding HCM Logo"
     />
