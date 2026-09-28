@@ -16,7 +16,13 @@ function appTemplate() {
     <div class="app-shell">
       <header class="topbar">
         <div class="brand">
-          <div class="brand-mark">D</div>
+          <div class="brand-mark">
+          <div class="brand-mark">
+          img
+      src="/logo.png"
+      alt="Decoding HCM Logo"
+    />
+          </div>
           <div>
             <div class="brand-name">DECODING HCM</div>
             <div class="brand-sub">BSF HCM Normalization Calculator</div>
