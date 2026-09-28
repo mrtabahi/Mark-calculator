@@ -19,7 +19,7 @@ function appTemplate() {
           <div class="brand-mark">
           
          < img
-      src="logo.png"
+      src="Mark-calculator/decoding-hcm-normalizer/public/logo.png"
       alt="Decoding HCM Logo"
     />
           </div>
