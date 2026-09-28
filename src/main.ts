@@ -18,7 +18,7 @@ function appTemplate() {
       <header class="topbar">
         <div class="brand">
           <div class="brand-mark">
-          img
+          <img
       src="/logo.png"
       alt="Decoding HCM Logo"
     />
@@ -31,6 +31,7 @@ function appTemplate() {
         <div class="top-actions">
           <span class="status-dot"></span><span id="db-status">Calculator ready</span>
         </div>
+       
       </header>
 
       <main class="container">
