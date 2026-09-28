@@ -19,12 +19,12 @@ function appTemplate() {
         <div class="brand">
           <div class="brand-mark">
           <img
-      src="/public/logo.png"
+      src="logo.png"
       alt="Decoding HCM Logo"
     />
           </div>
           <div>
-            <div class="brand-name">DECODING HCMmmmm</div>
+            <div class="brand-name">DECODING HCM</div>
             <div class="brand-sub">BSF HCM Normalization Calculator</div>
           </div>
         </div>
